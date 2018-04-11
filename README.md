@@ -1,3 +1,5 @@
+Note! This document is not complete.
+
 # shutter-ocr
 shutter-ocr is a Tesseract based OCR plugin for Shutter. 
 
