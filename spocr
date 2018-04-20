@@ -52,19 +52,15 @@ HEIGHT="${3}"
 fPath=${FILE%/*} 
 fBase=${FILE##*/}
 
-#xmessage "$(printf "file: $FILE")"
-
 resizedFile="${fPath}/.double_$fBase"
 
-#xmessage "$(printf "dFile: $resizedFile")"
-
+#Resizing the image improves recognition 
 convert "$FILE"  -resize 400% "$resizedFile" # -negate
-res=`tesseract  "$resizedFile" stdout  -l eng`
+res="`tesseract  "$resizedFile" stdout  -l eng 2>&1`"
+#Remove the resized image
+rm "$resizedFile"
 
-konsole -e "/usr/share/shutter/resources/system/plugins/shell/spocr/printParam \"$res\""
-#xmessage "$(printf "$res")"
-
-#convert "${FILE}" -trim +repage "${FILE}"
+echo "$res" | zenity --text-info --title "shutter-ocr" &
 
        
 exit 0

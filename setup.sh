@@ -1,10 +1,11 @@
 #!/bin/bash
+set -e
 
 pluginDir="/usr/share/shutter/resources/system/plugins/shell/spocr/"
 
 #rootChecks
 if (( $EUID != 0 )); then
-    echo "Please run as root"
+    echo "Please run as root!"
     exit
 fi
 
