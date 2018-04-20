@@ -11,7 +11,6 @@ fi
 
 mkdir -p "$pluginDir"
 
-cp printParam "$pluginDir"
 cp spocr "$pluginDir"
 cp spocr.svg "$pluginDir"
 
