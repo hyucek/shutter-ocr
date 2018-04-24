@@ -55,7 +55,7 @@ fBase=${FILE##*/}
 resizedFile="${fPath}/.double_$fBase"
 
 #Resizing the image improves recognition 
-convert "$FILE"  -resize 400% "$resizedFile" # -negate
+convert "$FILE"  -resize 1600% "$resizedFile" # -negate
 res="`tesseract  "$resizedFile" stdout  -l eng 2>&1`"
 #Remove the resized image
 rm "$resizedFile"
