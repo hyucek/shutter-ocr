@@ -9,6 +9,15 @@ if (( $EUID != 0 )); then
     exit
 fi
 
+
+#Check dependencies
+for c in shutter tesseract convert zenity ; do
+	command -v "$c" >/dev/null 2>&1 || { echo >&2 "Error! $c not found."; 
+		exit 1; 
+	}
+done
+
+
 mkdir -p "$pluginDir"
 
 cp spocr "$pluginDir"
