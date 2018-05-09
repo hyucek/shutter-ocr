@@ -23,7 +23,9 @@ sudo ./setup.sh
 ```
 
 ## Usage tips
-Shutter can be run in "Draw a rectangle..." mode with 
+- Shutter can be run in "Draw a rectangle..." mode with 
 ```bash
 shutter -s
 ```
+- Run a plugin hotkey is `Shift+Ctrl+P`
+- Run the plugin hotkey is `Alt+R`
