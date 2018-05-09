@@ -3,6 +3,8 @@ Note! This project is currently under development.
 # shutter-ocr
 shutter-ocr is a Tesseract based OCR plugin for Shutter. 
 
+![Alt text](img/sc01.png "Screenshot")
+
 **Installation**
 ```bash
 sudo apt-get update;
